@@ -11,7 +11,7 @@ class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     private let quality = AVCaptureSession.Preset.medium
     private var permissionGranted = false
     private let sessionQueue = DispatchQueue(label: "session queue")
-    private let captureSession = AVCaptureSession()
+    let captureSession = AVCaptureSession()
     private let context = CIContext()
     
     weak var delegate: FrameExtractorDelegate?
@@ -65,8 +65,8 @@ class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         guard let connection = videoOutput.connection(with: AVFoundation.AVMediaType.video) else { return }
         guard connection.isVideoOrientationSupported else { return }
         guard connection.isVideoMirroringSupported else { return }
-        connection.videoOrientation = .portrait
-        connection.isVideoMirrored = position == .back
+//        connection.videoOrientation = .landscapeLeft
+//        connection.isVideoMirrored = position == .back
     }
     
     private func selectCaptureDevice() -> AVCaptureDevice? {
@@ -86,9 +86,9 @@ class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     // MARK: AVCaptureVideoDataOutputSampleBufferDelegate
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-//        guard let uiImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
+        guard let uiImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
         DispatchQueue.main.async { [unowned self] in
-//            self.delegate?.captured(image: uiImage)
+            self.delegate?.captured(image: uiImage)
         }
     }
 }

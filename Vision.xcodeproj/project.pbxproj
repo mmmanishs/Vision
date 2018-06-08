@@ -13,6 +13,7 @@
 		064A250A20C9F3B8004B6DEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064A250920C9F3B8004B6DEE /* Assets.xcassets */; };
 		064A250D20C9F3B8004B6DEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064A250B20C9F3B8004B6DEE /* LaunchScreen.storyboard */; };
 		064A251520C9F447004B6DEE /* FrameExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064A251420C9F447004B6DEE /* FrameExtractor.swift */; };
+		064FD88120CA6FDB006C2A89 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064FD88020CA6FDB006C2A89 /* CameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		064A250C20C9F3B8004B6DEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		064A250E20C9F3B8004B6DEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		064A251420C9F447004B6DEE /* FrameExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtractor.swift; sourceTree = "<group>"; };
+		064FD88020CA6FDB006C2A89 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				064A250220C9F3B7004B6DEE /* AppDelegate.swift */,
 				064A250420C9F3B7004B6DEE /* ViewController.swift */,
+				064FD88020CA6FDB006C2A89 /* CameraView.swift */,
 				064A251420C9F447004B6DEE /* FrameExtractor.swift */,
 				064A250620C9F3B7004B6DEE /* Main.storyboard */,
 				064A250920C9F3B8004B6DEE /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				064A251520C9F447004B6DEE /* FrameExtractor.swift in Sources */,
 				064A250520C9F3B7004B6DEE /* ViewController.swift in Sources */,
 				064A250320C9F3B7004B6DEE /* AppDelegate.swift in Sources */,
+				064FD88120CA6FDB006C2A89 /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

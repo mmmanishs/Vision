@@ -7,20 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
-class ViewController: UIViewController, FrameExtractorDelegate {
-    func captured(image: UIImage) {
-        print("gota a frame")
-    }
-    
+class ViewController: UIViewController {
+    @IBOutlet weak var cameraView: CameraView!
     var frameExtractor: FrameExtractor!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.frameExtractor = FrameExtractor()
-            self.frameExtractor.delegate = self
-        }
+        cameraView.start()
     }
 
 
