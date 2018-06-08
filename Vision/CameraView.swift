@@ -11,6 +11,7 @@ import AVFoundation
 
 class CameraView: UIView, FrameExtractorDelegate {
     var frameExtractor: FrameExtractor!
+    var imageProcessor: ImageProcessor?
     fileprivate var previewLayer: AVCaptureVideoPreviewLayer? {
         return layer as? AVCaptureVideoPreviewLayer
     }
@@ -27,5 +28,6 @@ class CameraView: UIView, FrameExtractorDelegate {
     }
     
     func captured(image: UIImage) {
+        imageProcessor?.feedLinker(image: image)
     }
 }
