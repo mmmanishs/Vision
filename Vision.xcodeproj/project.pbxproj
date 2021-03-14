@@ -63,14 +63,22 @@
 				064A250220C9F3B7004B6DEE /* AppDelegate.swift */,
 				064A250420C9F3B7004B6DEE /* ViewController.swift */,
 				064FD88220CA7777006C2A89 /* ImageProcessor.swift */,
-				064FD88020CA6FDB006C2A89 /* CameraView.swift */,
-				064A251420C9F447004B6DEE /* FrameExtractor.swift */,
+				069435DB25FEBCF000080055 /* ImageExtractor */,
 				064A250620C9F3B7004B6DEE /* Main.storyboard */,
 				064A250920C9F3B8004B6DEE /* Assets.xcassets */,
 				064A250B20C9F3B8004B6DEE /* LaunchScreen.storyboard */,
 				064A250E20C9F3B8004B6DEE /* Info.plist */,
 			);
 			path = Vision;
+			sourceTree = "<group>";
+		};
+		069435DB25FEBCF000080055 /* ImageExtractor */ = {
+			isa = PBXGroup;
+			children = (
+				064FD88020CA6FDB006C2A89 /* CameraView.swift */,
+				064A251420C9F447004B6DEE /* FrameExtractor.swift */,
+			);
+			path = ImageExtractor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79FS6EETVS;
 				INFOPLIST_FILE = Vision/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +322,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79FS6EETVS;
 				INFOPLIST_FILE = Vision/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

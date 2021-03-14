@@ -12,7 +12,6 @@ protocol ImageProcessor {
     func feedLinker(image: UIImage)
 }
 
-
 class ImageProcessorType1: ImageProcessor {
     func feedLinker(image: UIImage) {
         // Here detect that the feed is stable

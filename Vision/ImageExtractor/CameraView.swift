@@ -10,11 +10,12 @@ import UIKit
 import AVFoundation
 
 class CameraView: UIView, FrameExtractorDelegate {
-    var frameExtractor: FrameExtractor!
+    private var frameExtractor: FrameExtractor!
     var imageProcessor: ImageProcessor?
-    fileprivate var previewLayer: AVCaptureVideoPreviewLayer? {
+    private var previewLayer: AVCaptureVideoPreviewLayer? {
         return layer as? AVCaptureVideoPreviewLayer
     }
+
     func start() {
         self.frameExtractor = FrameExtractor()
         self.frameExtractor.delegate = self
@@ -23,6 +24,7 @@ class CameraView: UIView, FrameExtractorDelegate {
             previewLayer.session = frameExtractor.captureSession
         }
     }
+    
     override class var layerClass: AnyClass {
         return AVCaptureVideoPreviewLayer.self
     }

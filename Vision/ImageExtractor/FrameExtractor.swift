@@ -19,7 +19,6 @@ class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     override init() {
         super.init()
         checkPermission()
-//        NotificationCenter.default.addObserver(self, selector: #selector(failedToStart), name: NSNotification.Name.AVCaptureSessionRuntimeError, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(failedToStart), name: NSNotification.Name.AVCaptureSessionDidStartRunning, object: nil)
         
         sessionQueue.async { [unowned self] in
@@ -87,8 +86,8 @@ class FrameExtractor: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     // MARK: AVCaptureVideoDataOutputSampleBufferDelegate
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let uiImage = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else { return }
-        DispatchQueue.main.async { [unowned self] in
+//        DispatchQueue.main.async { [unowned self] in
             self.delegate?.captured(image: uiImage)
-        }
+//        }
     }
 }
